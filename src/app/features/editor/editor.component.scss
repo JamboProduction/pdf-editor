@@ -1,0 +1,47 @@
+@import "media";
+
+.wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;
+
+  .header {
+    min-height: 72px;
+    border-bottom: 1px #f4f4f4 solid;
+  }
+
+  .toolbar {
+    min-height: 48px;
+    border-bottom: 1px #f4f4f4 solid;
+  }
+
+  .main {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+
+    .sidebar-preview {
+      width: 256px;
+      border-right: 1px #f4f4f4 solid;
+      overflow-y: overlay;
+    }
+
+    .body {
+      flex: 1;
+      overflow: overlay;
+    }
+
+    .sidebar-settings {
+      width: 256px;
+      border-left: 1px #f4f4f4 solid;
+      overflow-y: overlay;
+    }
+
+    @include max-width-992 {
+      .sidebar-preview, .sidebar-settings {
+        min-width: 192px;
+      }
+    }
+  }
+}

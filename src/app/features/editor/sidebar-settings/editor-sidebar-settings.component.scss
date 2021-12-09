@@ -1,0 +1,11 @@
+@import "variables";
+
+.wrapper {
+  padding: 24px;
+
+  .hint {
+    font-size: 14px;
+    line-height: 20px;
+    color: $text-color-muted;
+  }
+}

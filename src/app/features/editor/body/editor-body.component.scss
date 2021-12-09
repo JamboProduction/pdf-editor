@@ -1,0 +1,24 @@
+@import "media";
+
+.wrapper {
+  background-color: #e5e5e5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px;
+
+  .page {
+    max-width: 75%;
+    width: 100%;
+    aspect-ratio: 1 / 1.4;
+    background-color: #fff;
+    box-shadow: rgb(0 0 0 / 20%) 0 2px 4px 0;
+    outline: none;
+    margin-bottom: 16px;
+    padding: 64px;
+
+    @include max-width-992 {
+      max-width: 100%;
+    }
+  }
+}

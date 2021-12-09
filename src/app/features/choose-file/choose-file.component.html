@@ -1,0 +1,23 @@
+<div class="wrapper">
+
+  <div class="title">
+    <i class="fal fa-file-pdf"></i> PDF Editor
+  </div>
+
+  <div class="subtitle">Online tool to edit PDF documents</div>
+
+  <div class="file-drop-zone" appDnd (fileDropped)="onFileDropped($event)">
+
+    <input #fileInput type="file" hidden (change)="onChangeFileInput($event)"/>
+
+    <i class="fal fa-file-upload"></i>
+
+    <div class="dnd-hint">
+      Drag and drop file here <br> or
+    </div>
+
+    <div class="choose-file-btn" (click)="fileInput.click()">Choose file</div>
+
+  </div>
+
+</div>

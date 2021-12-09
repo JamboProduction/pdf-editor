@@ -1,0 +1,19 @@
+<div class="wrapper" *ngIf="file$ | async as file">
+
+  <div class="file">
+    <i class="fal fa-file-pdf" routerLink="/"></i>
+    <span #fileName class="file-name" contenteditable="true">{{file}}</span>
+    <i class="fal fa-pen" (click)="fileName.focus()"></i>
+  </div>
+
+  <div class="share-btn">
+    <i class="fal fa-share-alt"></i>
+  </div>
+
+  <div class="save-as-btn">
+    <i class="fal fa-download"></i>
+    <span>Save as</span>
+    <i class="fal fa-angle-down"></i>
+  </div>
+
+</div>

@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.pretty-scrollbar {
+  &::-webkit-scrollbar {
+    background: transparent;
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #999;
+    border-radius: 8px;
+  }
+
+  &::-webkit-scrollbar-corner {
+    border-radius: 8px;
+  }
+}

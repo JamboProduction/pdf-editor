@@ -1,0 +1,89 @@
+@import "variables";
+
+.wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 0 8px;
+
+  .tools {
+    flex: 1;
+    display: flex;
+
+    &-left {
+      justify-content: flex-start;
+    }
+
+    &-center {
+      justify-content: center;
+    }
+
+    &-right {
+      justify-content: flex-end;
+    }
+
+    .tool {
+      min-width: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $text-color-dark;
+      cursor: pointer;
+
+      &.selected {
+        background-color: #eee;
+      }
+
+      &.disabled {
+        opacity: 0.25;
+        pointer-events: none;
+      }
+
+      &:not(.selected):hover {
+        background-color: rgba($color-primary, 0.1);
+      }
+
+      i {
+        font-size: 18px;
+        margin-right: 4px;
+
+        &.fa-angle-down {
+          font-size: 14px;
+          margin-right: 0;
+        }
+      }
+    }
+
+    .pagination {
+      height: 32px;
+      align-self: center;
+      display: flex;
+      border: 1px #ddd solid;
+      border-radius: 4px;
+      overflow: hidden;
+      margin: 0 8px;
+
+      input {
+        width: 36px;
+        outline: none;
+        border: none;
+        font-size: 16px;
+        line-height: 22px;
+        color: $text-color-dark;
+        text-align: center;
+      }
+
+      .total {
+        width: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #ddd;
+        font-size: 16px;
+        line-height: 22px;
+        color: $text-color-muted;
+      }
+    }
+  }
+}

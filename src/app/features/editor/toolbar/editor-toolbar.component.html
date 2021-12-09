@@ -1,0 +1,79 @@
+<div class="wrapper">
+
+  <div class="tools tools-left">
+
+    <div class="tool">
+      <i class="fal fa-file"></i>
+      <i class="fal fa-angle-down"></i>
+    </div>
+
+    <div class="tool" (click)="selectTool('mouse')" [class.selected]="activeTool === 'mouse'">
+      <i class="fal fa-mouse-pointer"></i>
+    </div>
+
+    <div class="tool" (click)="selectTool('pen')" [class.selected]="activeTool === 'pen'">
+      <i class="fal fa-pen"></i>
+    </div>
+
+    <div class="tool" (click)="selectTool('highlighter')" [class.selected]="activeTool === 'highlighter'">
+      <i class="fal fa-highlighter"></i>
+      <i class="fal fa-angle-down"></i>
+    </div>
+
+    <div class="tool" (click)="selectTool('text')" [class.selected]="activeTool === 'text'">
+      <i class="fal fa-text"></i>
+    </div>
+
+    <div class="tool" (click)="selectTool('figure')" [class.selected]="activeTool === 'figure'">
+      <i class="fal fa-square"></i>
+      <i class="fal fa-angle-down"></i>
+    </div>
+
+    <div class="tool">
+      <i class="fal fa-image"></i>
+    </div>
+
+  </div>
+
+  <div class="tools tools-center">
+
+    <div class="tool" (click)="navigatePage(-1)" [class.disabled]="currentPage === 1">
+      <i class="fal fa-arrow-left"></i>
+    </div>
+
+    <div class="pagination">
+      <input type="text" [(ngModel)]="currentPage">
+      <div class="total">5</div>
+    </div>
+
+    <div class="tool" (click)="navigatePage(1)" [class.disabled]="currentPage === totalPages">
+      <i class="fal fa-arrow-right"></i>
+    </div>
+
+  </div>
+
+  <div class="tools tools-right">
+
+    <div class="tool">
+      <i class="fal fa-search-minus"></i>
+    </div>
+
+    <div class="tool">
+      <i class="fal fa-search-plus"></i>
+    </div>
+
+    <div class="tool">
+      <i class="fal fa-undo"></i>
+    </div>
+
+    <div class="tool">
+      <i class="fal fa-redo"></i>
+    </div>
+
+    <div class="tool">
+      <i class="fal fa-search"></i>
+    </div>
+
+  </div>
+
+</div>
