@@ -31,6 +31,10 @@
       color: $text-color-dark;
       cursor: pointer;
 
+      &-no-highlight:hover {
+          background-color: rgba($color-primary, 0.1);
+      }
+
       &.selected {
         background-color: #eee;
       }
@@ -40,7 +44,7 @@
         pointer-events: none;
       }
 
-      &:not(.selected):hover {
+      &:not(.selected, .no-highlight):hover {
         background-color: rgba($color-primary, 0.1);
       }
 
@@ -55,14 +59,19 @@
       }
     }
 
+    .divider {
+      margin: 0 12px;
+      border-left: 1px #eee solid;
+    }
+
     .pagination {
       height: 32px;
       align-self: center;
       display: flex;
-      border: 1px #ddd solid;
+      border: 1px #eee solid;
       border-radius: 4px;
       overflow: hidden;
-      margin: 0 8px;
+      margin-right: 12px;
 
       input {
         width: 36px;
@@ -79,10 +88,55 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: #ddd;
+        background-color: #eee;
         font-size: 16px;
         line-height: 22px;
         color: $text-color-muted;
+      }
+    }
+
+    .scaling {
+      display: flex;
+      overflow: hidden;
+
+      input {
+        align-self: center;
+        height: 32px;
+        border: 1px #eee solid;
+        border-radius: 4px;
+        width: 54px;
+        outline: none;
+        font-size: 16px;
+        line-height: 22px;
+        color: $text-color-dark;
+        text-align: center;
+      }
+    }
+
+    .fitting {
+      display: flex;
+      align-items: center;
+
+      &-tool {
+        display: flex;
+        align-items: center;
+        padding: 0 12px;
+        cursor: pointer;
+
+        &.fit-horizontal {
+          i {
+            font-size: 14px;
+            margin: 1px;
+          }
+        }
+
+        &.fit-vertical {
+          flex-direction: column;
+
+          i {
+            font-size: 12px;
+          }
+        }
       }
     }
   }

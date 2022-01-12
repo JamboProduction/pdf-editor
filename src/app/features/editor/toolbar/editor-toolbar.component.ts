@@ -19,6 +19,8 @@ export class EditorToolbarComponent implements OnDestroy {
   currentPage = 1;
   totalPages = 5;
 
+  currentZoom = '100%';
+
   constructor(
     private store: Store
   ) {

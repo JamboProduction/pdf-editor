@@ -2,13 +2,8 @@
 
   <div class="tools tools-left">
 
-    <div class="tool">
-      <i class="fal fa-file"></i>
-      <i class="fal fa-angle-down"></i>
-    </div>
-
     <div class="tool" (click)="selectTool('mouse')" [class.selected]="activeTool === 'mouse'">
-      <i class="fal fa-mouse-pointer"></i>
+      <i class="fal fa-hand-paper"></i>
     </div>
 
     <div class="tool" (click)="selectTool('pen')" [class.selected]="activeTool === 'pen'">
@@ -16,8 +11,7 @@
     </div>
 
     <div class="tool" (click)="selectTool('highlighter')" [class.selected]="activeTool === 'highlighter'">
-      <i class="fal fa-highlighter"></i>
-      <i class="fal fa-angle-down"></i>
+      <i class="fal fa-i-cursor"></i>
     </div>
 
     <div class="tool" (click)="selectTool('text')" [class.selected]="activeTool === 'text'">
@@ -37,30 +31,54 @@
 
   <div class="tools tools-center">
 
-    <div class="tool" (click)="navigatePage(-1)" [class.disabled]="currentPage === 1">
-      <i class="fal fa-arrow-left"></i>
-    </div>
+<!--    <div class="tool tool-sm" (click)="navigatePage(-1)" [class.disabled]="currentPage === 1">-->
+<!--      <i class="fal fa-arrow-up"></i>-->
+<!--    </div>-->
+
+<!--    <div class="tool tool-sm" (click)="navigatePage(1)" [class.disabled]="currentPage === totalPages">-->
+<!--      <i class="fal fa-arrow-down"></i>-->
+<!--    </div>-->
 
     <div class="pagination">
-      <input type="text" [(ngModel)]="currentPage">
+      <input [(ngModel)]="currentPage">
       <div class="total">5</div>
     </div>
 
-    <div class="tool" (click)="navigatePage(1)" [class.disabled]="currentPage === totalPages">
-      <i class="fal fa-arrow-right"></i>
+    <div class="divider"></div>
+
+    <div class="scaling">
+
+      <div class="tool no-highlight">
+        <i class="fal fa-minus"></i>
+      </div>
+
+      <input [(ngModel)]="currentZoom">
+
+      <div class="tool no-highlight">
+        <i class="fal fa-plus"></i>
+      </div>
+
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="fitting">
+
+      <div class="fitting-tool fit-horizontal">
+        <i class="fal fa-arrow-to-left"></i>
+        <i class="fal fa-arrow-to-right"></i>
+      </div>
+
+      <div class="fitting-tool fit-vertical">
+        <i class="fal fa-arrow-to-top"></i>
+        <i class="fal fa-arrow-to-bottom"></i>
+      </div>
+
     </div>
 
   </div>
 
   <div class="tools tools-right">
-
-    <div class="tool">
-      <i class="fal fa-search-minus"></i>
-    </div>
-
-    <div class="tool">
-      <i class="fal fa-search-plus"></i>
-    </div>
 
     <div class="tool">
       <i class="fal fa-undo"></i>
