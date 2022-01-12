@@ -1,0 +1,40 @@
+<div class="wrapper">
+
+  <div class="pagination">
+    <input [(ngModel)]="currentPage">
+    <div class="total">5</div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="scaling">
+
+    <div class="scaling-tool">
+      <i class="fal fa-minus"></i>
+    </div>
+
+    <input [(ngModel)]="currentZoom">
+
+    <div class="scaling-tool">
+      <i class="fal fa-plus"></i>
+    </div>
+
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="fitting">
+
+    <div class="fitting-tool fit-horizontal">
+      <i class="fal fa-arrow-to-left"></i>
+      <i class="fal fa-arrow-to-right"></i>
+    </div>
+
+    <div class="fitting-tool fit-vertical">
+      <i class="fal fa-arrow-to-top"></i>
+      <i class="fal fa-arrow-to-bottom"></i>
+    </div>
+
+  </div>
+
+</div>

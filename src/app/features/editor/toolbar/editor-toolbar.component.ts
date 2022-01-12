@@ -16,11 +16,6 @@ export class EditorToolbarComponent implements OnDestroy {
   activeTool: ToolType;
   activeToolSubs: Subscription;
 
-  currentPage = 1;
-  totalPages = 5;
-
-  currentZoom = '100%';
-
   constructor(
     private store: Store
   ) {
@@ -32,13 +27,6 @@ export class EditorToolbarComponent implements OnDestroy {
   ngOnDestroy(): void {
     if (this.activeToolSubs) {
       this.activeToolSubs.unsubscribe();
-    }
-  }
-
-  navigatePage(delta: 1 | -1): void {
-    const nextPage = Number(this.currentPage) + delta;
-    if (nextPage >= 1 && nextPage <= this.totalPages) {
-      this.currentPage = nextPage;
     }
   }
 

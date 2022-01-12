@@ -5,6 +5,7 @@ import {FormsModule} from '@angular/forms';
 import {EditorComponent} from './editor.component';
 import {EditorHeaderComponent} from './header/editor-header.component';
 import {EditorToolbarComponent} from './toolbar/editor-toolbar.component';
+import {EditorToolbarViewerToolsComponent} from './toolbar/viewer-tools/editor-toolbar-viewer-tools.component';
 import {EditorBodyComponent} from './body/editor-body.component';
 import {EditorSidebarPreviewComponent} from './sidebar-preview/editor-sidebar-preview.component';
 import {EditorSidebarSettingsComponent} from './sidebar-settings/editor-sidebar-settings.component';
@@ -15,6 +16,7 @@ import {EditorRoutingModule} from './editor-routing.module';
     EditorComponent,
     EditorHeaderComponent,
     EditorToolbarComponent,
+    EditorToolbarViewerToolsComponent,
     EditorBodyComponent,
     EditorSidebarPreviewComponent,
     EditorSidebarSettingsComponent,

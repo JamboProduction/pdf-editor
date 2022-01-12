@@ -25,6 +25,10 @@
       width: 256px;
       border-right: 1px #f4f4f4 solid;
       overflow-y: overlay;
+
+      @include max-width-992 {
+        display: none;
+      }
     }
 
     .body {
@@ -42,6 +46,15 @@
       .sidebar-preview, .sidebar-settings {
         min-width: 192px;
       }
+    }
+  }
+
+  .toolbar-viewer-tools {
+    display: none;
+    min-height: 48px;
+
+    @include max-width-992 {
+      display: block;
     }
   }
 }
